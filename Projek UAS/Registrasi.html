@@ -1,0 +1,49 @@
+<htMl>
+    <Head>
+        <Title>Register</Title>
+        <link rel="stylesheet" href="style2.css">
+    </Head>
+    <body>
+       <main>
+        <div class="wrapper">
+            <form onsubmit="login(event)">
+                <h1>WELCOME</h1>
+
+             <div class="input-box">
+                <input id="username" type="text"placeholder="Username"
+                required>
+             </div>
+
+             <div class="input-box">
+                <input id="password" type="password"placeholder="password"
+                required>
+             </div>
+
+             <button type="submit" class="btn" >Login</button>
+             
+                
+            </form>
+        </div>
+        </main>
+
+
+        <script>
+         function login(event) {
+            event.preventDefault();
+
+            let username = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+
+   
+            if (username === ("Kelompok 5") && password === "siswa-nf23") {
+                window.location.href = ""; //Masukkan nama web page nya
+        
+            } else {
+             alert("Username dan password yang Anda masukkan tidak valid");
+            }   
+            
+         }   
+
+        </script>
+    </body>
+</htMl>

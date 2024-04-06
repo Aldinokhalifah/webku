@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".btn-hide").click(function(){
+                $("p").hide(1000);
+                });
+            
+
+            $(".btn-show").click(function(){
+            $("p").show(1000);
+            });
+
+            $(".btn-toggle").click(function(){
+                $("p").toggle(1000);
+                });
+
+            
+        });
+    </script>
+
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+}
+
+.container-rwd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ .rwd {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.rwd-box {
+    padding: 10vw;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 25px;
+}
+
+.rwd-box p {
+    font-size: 1.5em;
+}
+
+.btn {
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+    margin: 1rem auto;
+}
+    </style>
+</head>
+<body>
+    <div class="container-rwd">
+        <h1 class="rwd">Jquery</h1>
+        <div class="rwd-box">
+            <p>Teks ini akan hilang jika tombol ditekan</p>
+            <button class="btn-hide">Click Me for hide</button>
+            <button class="btn-show">Click Me for show</button>
+            <button class="btn-toggle">Click Me for hide and show</button>
+        </div>
+    </div>
+</body>
+
+
+</html>

@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container-rwd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ .rwd {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+}
+
+.rwd-box {
+    padding: 10vw;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 25px;
+}
+
+.rwd-box p {
+    font-size: 1.5em;
+}
+
+.non-rwd {
+    margin-top: 16px;
+    font-size: 64px;
+}
+
+.non-rwd-box {
+    padding: 100px;
+    background-color: cadetblue;
+    color: white;
+    border-radius: 25px;
+}
+
+.non-rwd-box p {
+    font-size: 24px;
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pajak Kendaraan</title>
+    <style>
+       
+    body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        left: 40%;
+        max-width: 300px;
+    }
+
+    label {
+        margin-bottom: 5px;
+    }
+
+    input, select, button {
+        margin-bottom: 10px;
+    }
+
+    button {
+        cursor: pointer;
+    }
+
+    #result {
+        margin-bottom: 20px;
+    }
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Kalkulator Pajak</legend>
+        <form id="form">
+            <label for="kendaraan">Jenis Kendaraan:</label>
+            <select id="kendaraan" name="kendaraan">
+                <option value="Mobil">Mobil</option>
+                <option value="Motor">Motor</option>
+            </select>
+    
+            <label for="tipe">Tipe Kendaraan:</label>
+            <input type="text" id="tipe" name="tipe" required>
+    
+            <label for="harga">Harga Kendaraan:</label>
+            <input type="number" id="harga" name="harga" required>
+            
+            <label for="hasil">Hasil:</label>
+            <textarea cols="30" rows="10"  id="result"></textarea>
+    
+            <button type="button" onclick="hitungPajak()">Hitung Pajak</button>
+        </form>
+    </fieldset>
+
+
+    <script>
+        function hitungPajak() {
+    let kendaraan = document.getElementById('kendaraan').value;
+    let tipe_kendaraan = document.getElementById('tipe').value;
+    let hargaInput = document.getElementById('harga');
+    const harga = Number(hargaInput.value); 
+    hargaInput.innerHTML = harga; 
+
+    if (kendaraan === 'Mobil') {
+        let pkb = (2 / 100) * harga;
+        let bbnkb = (10 / 100) * harga;
+        const swdkllj = 143000; 
+        const biaya_administrasiTNKB = 100000; 
+        const biaya_penerbitanSTNK = 50000 + 200000; 
+        
+        let hasil = bbnkb + pkb + swdkllj + biaya_administrasiTNKB + biaya_penerbitanSTNK;
+
+        document.getElementById('result').innerHTML = `Maka pajak mobil ${tipe_kendaraan} tahun pertama adalah = ${hasil}`;
+    } else if (kendaraan === 'Motor') {
+        let pkb = (10 / 100) * harga;
+        let bbnkb = (2 / 100) * harga;
+        const swdkllj = 35000; 
+        const biaya_administrasiTNKB = 100000;
+        const biaya_penerbitanSTNK = 50000 + 100000; 
+
+        let hasil = bbnkb + pkb + swdkllj + biaya_administrasiTNKB + biaya_penerbitanSTNK;
+
+        document.getElementById('result').innerHTML = `Maka pajak motor ${tipe_kendaraan} tahun pertama adalah = ${hasil}`;
+    } else {
+        alert("Jenis kendaraan yang anda masukkan tidak valid!");
+    }
+}
+
+    </script>
+</body>
+</html>

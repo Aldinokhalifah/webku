@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes animasi{
+            from{margin-top: 100px;}
+            to{margin-top: 0px ;}
+        }
+
+        .satu{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            padding: 10px;
+            width: 20px;
+            margin: 50px auto;
+            background-color: aqua;
+            animation: animasi 2s infinite alternate;
+        }
+
+       
+
+        .dua{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25px;
+            padding: 10px;
+            width: 20px;
+            margin: 150px auto;
+            background-color: violet;
+            animation:dua 3s infinite alternate ;
+        }
+
+        @keyframes dua{
+            0%{
+                padding: 50px;
+            }
+            25%{
+                rotate: 90deg;
+            }
+            50%{
+                background-color: gold;
+                
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="satu">satu</div>
+    
+    <div class="dua">dua</div>
+</body>
+</html>

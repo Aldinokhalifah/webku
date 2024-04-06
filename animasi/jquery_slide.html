@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script> 
+$(document).ready(function(){
+  $("#flip").click(function(){
+    $("#panel ").slideDown("slow");
+  });
+  $("#flip2").click(function(){
+  $("#panel2").slideUp();
+  });
+$("#flip3").click(function(){
+  $("#panel3").slideToggle();
+});
+});
+</script>
+<style> 
+#panel, #flip, #panel2, #flip2, #panel3, #flip3 {
+  padding: 5px;
+  text-align: center;
+  background-color: #e5eecc;
+  border: solid 1px #c3c3c3;
+}
+
+#panel,#panel3 {
+  padding: 50px;
+  display: none;
+}
+
+#panel2 {
+  padding: 50px;
+}
+</style>
+</head>
+<body>
+ 
+<div id="flip">Click to slide down panel</div>
+<div id="panel">Hello world!</div>  
+<br>
+<div id="flip2">Click to slide up panel</div>
+<div id="panel2">Hello world!</div>  
+<br>
+<div id="flip3">Click to slide  panel</div>
+<div id="panel3">Hello world!</div>  
+
+
+
+
+</body>
+</html>
