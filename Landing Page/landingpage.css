@@ -1,0 +1,592 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-around;  
+    align-items: center;
+    padding: 18px 100px;
+    transition: 0.5 linear;
+    border: 2px solid #b3b3cc;
+    backdrop-filter: blur( 8px);
+    border-radius: 10px;
+}
+
+section {
+    padding: 50px 100px;
+}
+
+.logo img {
+    width: 60px;
+    border-radius: 25px 25px;
+}
+
+.navbar {
+    display: flex;
+    font-weight: 1000;
+}
+
+.navbar li {
+    padding: 8px 17px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    list-style-type: none;
+  
+}
+
+.navbar li:hover{
+    color: gray;
+    border-radius: 20px;
+    transition: 0.2 all linear;
+    cursor: pointer;
+}
+
+header button {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 40px;
+    background: white;
+    color:black;
+    font-weight: 500;
+    text-align: center;
+    border: none;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 0 9px #999;
+    background-color: #f0f0f0;
+}
+
+header button:active {
+    background-color: #ffff;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }
+
+.home{
+    width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(17rem,auto));
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.home-text h1{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    font-size: 45px;
+    color: #001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+    text-shadow:
+    -1px -1px 1px #000, /* Shadow di kiri atas */
+    1px -1px 1px #000,  /* Shadow di kanan atas */
+    -1px 1px 1px #000,  /* Shadow di kiri bawah */
+    1px 1px 1px #000;   /* Shadow di kanan bawah */
+}
+
+.home-text p{
+    text-align: center;
+    color: black;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+    
+.search input{
+    position: relative;
+    bottom: 210px;
+    left: 25%;
+    width: 600px;
+    height: 40px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+    background-color: #f0f0f0;
+    
+}
+
+.search .bx{
+    position: relative;
+    bottom: 208px;
+    left: 226px;
+    font-weight: 600;
+    font-size: 16px;
+    color: gray;
+}
+
+.sponsor{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;    
+    margin-bottom: 100px;
+}
+
+.sponsor-item h2{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+    
+}
+
+.sponsor-item img{
+
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+}
+
+.sosmed-text h2{
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    color: #001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+}
+
+.sosmed-text b{
+    color: palevioletred;
+}
+
+.sosmed-img{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+   
+}
+
+.sosmed-img img{
+    border: 2px solid black;
+    margin-top: 5px;
+    border-radius: 10px;
+    height: 300px;
+    margin-left: 5px;
+}
+
+.sosmed-img img.satu{
+    margin-top: 30px;
+}
+
+.sosmed-img img.dua{
+    margin-top: 30px;
+    height: 400px;
+    width: 300px;
+}
+
+.sosmed-img img.tiga{
+    margin-top: 30px;
+}
+
+
+.sosmed-img img.empat{
+    position: relative;
+    bottom: 100px;
+    width: 300px;
+    height: 400px;
+}
+
+.sosmed-img img.enam{
+    position: relative;
+    bottom: 100px;
+    width: 300px;
+    height: 400px;
+}
+
+.products-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,auto));
+    gap: 1.5rem;
+    margin-top: 2rem;
+    color: #001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+}
+
+.products-container .box {
+    position: relative;
+    border: 2px solid  #001f3f;
+    padding: 100px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    box-shadow: black;
+    background-color: #f0f0f0;
+}
+
+.box li{
+    list-style-type: circle;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.products-container .box h3{
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 0.5rem 0 0.5rem;
+}
+
+.products-container .box .content{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+   
+}
+
+.products-container .box .content span{
+    padding: 10px 40px 10px 40px;
+    color: white;
+    background: palevioletred;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+.products-container .box .content button{
+    padding: 10px 40px 10px 40px;
+    color: black;
+    border: 2px solid  #001f3f;
+    cursor: pointer;
+    border-radius: 50px;
+    text-transform: uppercase;
+}
+
+.products-container .box .content button:hover{
+    background:  #001f3f;
+    color: white;
+    transition: 0.2s all linear;
+}
+
+.contact h2{
+    text-align: center;
+    color:#001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+}
+
+.form .form-text label{ 
+    display: block;
+    font-weight: bold;
+    color:#001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+    margin-bottom: 5px;
+}
+
+.form .form-text input[type="text"],input[type="email"] {
+    border: 2px solid  #001f3f;
+    width: 200px;
+    height: 30px;
+    border-radius: 50px;
+    background-color: #f0f0f0;
+}
+
+.form .form-text input[type="submit"] {
+    font-weight: bold;
+    color:#001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+    cursor: pointer;
+    border: 2px solid  #001f3f;
+    margin-left: 40px;
+    width: 300px;
+    height: 40px;
+    border-radius: 50px;
+}
+
+.form .form-text textarea{
+    border: 2px solid  #001f3f;
+    width: 400px;
+    height: 60px;
+    background-color: #f0f0f0;
+    border-radius: 20px;
+}
+
+.form .form-text input[type="submit"]:hover{
+    color: white;
+    background-color: palevioletred;
+}
+
+.footer{
+    color:#001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(240px,auto));
+    gap: 1.5rem;
+}
+
+.footer-box h2{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.footer-box p {
+    font-size: 0.938rem;
+    margin-bottom: 10px;
+}
+
+.social{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+}
+
+.social a .bx {
+    font-size: 24px;
+    color: #001f3f;
+    padding: 10px;
+    border-radius: 0.2rem;
+}
+
+.social a .bx:hover{
+    color: palevioletred;
+}
+
+.footer-box h3 {
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.footer-box li a {
+    color: #001f3f ;
+    list-style-type: circle;
+}
+.footer li a:hover{
+    color: palevioletred;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    row-gap: 0.5rem;
+}
+
+.contact span{
+    display: flex;
+    align-items: center;
+}
+
+.contact i{
+    font-size: 20px;
+    margin-right: 1rem;
+}
+
+.copyright{
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    color:#001f3f;
+    font-family: ' UI', Tahoma, Geneva, Verdana, sans-Segoeserif;
+}
+
+/* Desktop Styles */
+header {
+    padding: 18px 100px;
+}
+
+.search input {
+    width: 600px;
+}
+
+.home-text h1 {
+    font-size: 45px;
+}
+
+.sponsor {
+    margin-bottom: 100px;
+}
+
+.sponsor-item img {
+    width: 50px;
+    height: 50px;
+    margin: 50px;
+}
+
+.sosmed-img img {
+    height: 300px;
+}
+
+.sosmed-img img.dua {
+    height: 400px;
+    width: 300px;
+}
+
+.products-container {
+    gap: 1.5rem;
+}
+
+.products-container .box {
+    padding: 100px 35px;
+}
+
+.form .form-text input[type="text"],
+.form .form-text input[type="email"] {
+    width: 200px;
+}
+
+.form .form-text textarea {
+    width: 400px;
+}
+
+
+@media (max-width:1058px){
+    header{
+        padding:16px 60px ;
+    }
+    section{
+        padding: 50px 60px;
+    }
+    .home-text h1{
+        font-size: 2.4rem;
+    }
+    .search .bx{
+        position: relative;
+        right: 40px;
+        left: 200px;
+    }
+}
+
+@media (max-width:768px){
+    header{
+        padding: 12px 4%;
+    }
+    header button{
+        padding: 10px 10px;
+    }
+    #menu-icon{
+        display: initial;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        row-gap: 1.4rem;
+        padding: 20px;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .search input{
+        width: 400px;
+    }
+    .search .bx{
+       position: relative;
+       right: 100px;
+       left: 140px;
+    }
+    .sosmed-img img.dua{
+        margin-top: 20px;
+        height: 300px;
+        width: 300px;
+    }
+    .sosmed-img img.empat{
+        margin-top: 100px;
+        height: 300px;
+        width: 300px;
+    }
+    .sosmed-img img.enam{
+        margin-top: 5px;
+        height: 300px;
+        width: 300px;
+    }
+    .sosmed-img img.satu{
+        position: relative;
+        bottom: 10px;
+    } 
+    .sosmed-img img.tiga{
+        position: relative;
+        bottom: 28px;
+    }
+    .sosmed-img img.lima{
+        position: relative;
+        bottom: 100px;
+    }
+}
+@media (max-width:360px){
+    header{
+        position: fixed;
+        padding: 1px;
+        display: flex;
+        flex-direction: column;
+    }
+    header button{
+        padding: 5px 10px;
+        font-size: 10px;
+        margin: 5px;
+    }
+    .logo img{
+        width: 40px;
+    }
+    .navbar{
+        display: flex;
+        flex-direction: row;
+        row-gap: 5px;
+        padding: 10px;
+        width: 100%;
+        transition: 0.3s;
+        text-align: center;
+    }
+    .navbar li {
+        font-size: 10px;
+    }
+    .search input{
+        width: 200px;
+    }
+    .search .bx{
+        position: relative;
+        right: 50px;
+        left: 37px;
+    }
+    .home-text{
+        padding-top: 15px;
+    }
+    .home-text h1{
+        font-size:1.4rem ;
+    }
+    .home-text p{
+        font-size: 0.8rem;
+        font-weight: 300;
+    }
+    .heding h2 {
+        font-size: 1.2rem;
+    }
+    .sosmed-img img{
+        margin: 5px;
+    }
+    .sosmed-img img.dua{
+        margin-top: 1px;
+    }
+    .sosmed-img img.empat{
+        margin-top: 80px;
+    }
+    .form{
+        display: flex;
+        justify-content: flex-start;
+        width: 10px;
+    }
+    .form .form-text textarea{
+        width: 250px;
+    }
+    .form .form-text input[type="submit"]{
+        width: 200px;
+    }
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Latihan Array</title>
+    
+</head>
+<body>
+    <div class="">
+        <div id="root"></div>
+    </div>
+   
+    
+
+
+    <script type="text/babel">
+      const root = document.getElementById('root');
+      const container = ReactDOM.createRoot(root);
+
+     function Home() {
+        const [likes, setLikes] = React.useState(0);
+
+        function min() {
+            setLikes(likes - 1);
+        }
+
+        function plus() {
+            setLikes(likes + 1);
+        }
+
+        function reset() {
+            setLikes(0);
+        }
+
+        return(
+            <div>
+            <button onClick={min}>-</button>
+            <br/>
+            <h1>{likes}</h1> 
+            <br/>
+            <button onClick={plus}>+</button>
+            <br/>
+            <button onClick={reset}>Reset</button>
+            </div>
+        );
+     }
+      container.render(<Home/>);
+    </script>
+</body>
+</html>

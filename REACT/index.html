@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Belajar React</title>
+</head>
+<body>
+    <div>
+        <div id="root"></div>
+    </div>
+
+
+    <script type="text/babel">
+        const container = document.getElementById('root');
+        const root = ReactDOM.createRoot(container);
+        
+        function Header(props) {
+            return (<h1>Belajar React bareng {props.author}😴</h1>);
+        }
+
+        function Header2({author}) {
+            return (<h1>Belajar React bareng {author ? author : 'WPU'}😴</h1>);
+        }
+
+        function HomePage() {
+            return (
+                <>
+                <Header2  />
+                <Header2 author="AL" />
+                <Header author="WPU" />
+                <Header author="AL" />
+                
+                </>
+            );
+        }
+
+
+        root.render(<HomePage/>);
+    </script>
+</body>
+</html>
