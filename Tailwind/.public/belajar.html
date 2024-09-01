@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Tailwind</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* * {
+            border: 1px solid red;
+        } */
+    </style>
+    <script>
+        tailwiind.config = {
+            theme: {
+            extend: {
+            FontFamily: {
+                inter:['Inter']
+            },
+        }
+    }
+}
+    </script>
+</head>
+<body>
+    <h1 class="text-6xl font-serif font-bold-bold pb-4 text-center my-10">Belajar Tailwind</h1>
+
+    <section class="mb-4 bg-yellow-500">
+        <h2 class="text-center">spacing</h2>
+        <div class="m-4 bg-cyan-500">margin</div>
+        <div class="p-8 bg-emerald-500">padding</div>
+    </section>
+
+    <section class="mb-4 bg-gradient-to-br from-lime-500 via-emerald-400 to-orange-400">
+        <h2 class="text-center">Sizing</h2>
+        <div class="w-1/2 h-32 bg-fuchsia-200">sizing</div>
+    </section>
+
+    <section class="mb-96 font-inter max-w-3xl mx-auto">
+        <h2 class="mb-4 text-4xl font-bold"> Belajar Typhography <span class="bg-gradient-to-r from-blue-500 to-teal-500 bg-clip-text text-transparent">TailwindCSS</span></h2>
+        <div class="mb-2 text-lg text-gray-500">By AL, 1 Januari 2023</div>
+        <p class="mb-4">Lorem ipsum dolor sit amet <a href="" class="hover:underline font-bold">consectetur</a> adipisicing elit. Temporibus blanditiis perspiciatis incidunt ullam aliquam dolorum pariatur vero, fugit sequi asperiores velit vel omnis a beatae voluptatem ipsum exercitationem reiciendis! Minus aperiam culpa consequatur exercitationem dolores rem deleniti vero at quam unde, et quibusdam ratione, facilis obcaecati molestiae maiores quae modi!</p>
+        <blockquote class="mb-4 italic font-thin text-xl">"Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem corrupti cumque magni nemo doloribus ratione eligendi dolorum dolore aut atque?"</blockquote>
+        <p class="mb-4">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laudantium quam ipsa veniam similique aut totam velit quisquam at commodi officiis?</p>
+
+    </section>
+</body>
+</html>
