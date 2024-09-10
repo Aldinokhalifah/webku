@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <div class="font-mono flex flex-col justify-center left-1/2 p-32">
+        <span class="font-bold text-lg  text-slate-600">List Tugas yang selesai hari ini</span><br>
+        <div>
+             <input class="cursor-pointer peer" type="checkbox" id="check1" name="check1" value="Bike">
+             <label class="peer-checked:line-through peer-checked:text-green-700 peer-checked:text-base transition-all duration-500 text-red-700 text-lg" for="check1"> Belajar</label>
+        </div>
+        <div> 
+             <input class="cursor-pointer peer" type="checkbox" id="check2" name="check2" value="Car">
+             <label class="peer-checked:line-through peer-checked:text-green-700 peer-checked:text-base  transition-all duration-500 text-red-700 text-lg" for="check2">Olahraga</label>
+         </div>
+         <div>
+             <input class="cursor-pointer peer" type="checkbox" id="check3" name="check3" value="Boat">
+             <label class="peer-checked:line-through peer-checked:text-green-700 peer-checked:text-base  transition-all duration-500 text-red-700 text-lg" for="check3">Bekerja</label>
+         </div>
+    </div>
+</body>
+</html>
