@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="container w-64 mx-auto mt-24 shadow-lg px-5 rounded-md shadow-slate-500 outline outline-slate-300">
+        <h3 class="text-center text-lg font-bold font-sans">Register</h3>
+        <form action="" class="flex flex-col">
+            <label for="email">
+                <span class="block font-bold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 ml-0.5">Email</span>
+                <input type="email" placeholder="Enter email" id="email" 
+                class="px-3 py-2 border shadow rounded w-full block text-sm
+                placeholder:text-slate-400 focus:outline-none focus:ring-1
+                focus:ring-sky-500 focus:border-sky-500 invalid:text-pink-700
+                invalid:focus:ring-pink-700 invalid:focus:border-pink-700 peer"/>
+                <p class="text-sm ml-1 mt-1 text-pink-700 invisible peer-invalid:visible">Email tidak valid</p>
+            </label>
+            <label for="con_email">
+                <span class="block font-bold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 ml-0.5">Confirm Email</span>
+                <input type="email" placeholder="Confirm email" id="con_email" 
+                class="px-3 py-2 border shadow rounded w-full block text-sm
+                placeholder:text-slate-400 focus:outline-none focus:ring-1
+                focus:ring-sky-500 focus:border-sky-500"/>
+                <p class="text-sm ml-1 mt-1 invisible text-pink-700" id="p">Email tidak sesuai</p>
+            </label>
+            <label for="pw">
+                <span class="block font-bold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 ml-0.5">Password</span>
+                <input type="password" placeholder="Enter Password" id="pw" 
+                class="px-3 py-2 border shadow rounded w-full block text-sm
+                placeholder:text-slate-400 focus:outline-none focus:ring-1
+                focus:ring-sky-500 focus:border-sky-500"/>
+                <p class="text-sm ml-1 mt-1 invisible text-pink-700" id="p">Email tidak sesuai</p>
+            </label>
+            <label for="con_pw">
+                <span class="block font-bold mb-1 text-slate-700 after:content-['*'] after:text-pink-500 ml-0.5">Confirm Password</span>
+                <input type="password" placeholder="Confirm Password" id="con_pw" 
+                class="px-3 py-2 border shadow rounded w-full block text-sm
+                placeholder:text-slate-400 focus:outline-none focus:ring-1
+                focus:ring-sky-500 focus:border-sky-500"/>
+                <p class="text-sm ml-1 mt-1 invisible text-pink-700" id="p2">Password tidak sesuai</p>
+            </label>
+            <button class="px-3 py-2 bg-blue-800 mb-2 rounded-lg text-white font-semibold shadow-lg">Submit</button>
+            <div class="mb-1">
+                <input class="cursor-pointer" type="checkbox" name="" id="">
+                <label class="font-medium" for="">Remember Me </label>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const email = document.getElementById('email');
+            const pw = document.getElementById('pw');
+            const con_email = document.getElementById('con_email');
+            const con_pw = document.getElementById('con_pw');
+            const p = document.getElementById('p');
+            const p2 = document.getElementById('p2');
+
+            con_email.addEventListener('input', function() {
+                if (con_email.value !== email.value) {
+                    con_email.classList.add('invalid:text-pink-700', 'invalid:focus:ring-pink-700', 'invalid:focus:border-pink-700', 'peer');
+                    p.classList.remove('invisible');
+                } else {
+                    con_email.classList.remove('invalid:text-pink-700', 'invalid:focus:ring-pink-700', 'invalid:focus:border-pink-700', 'peer');
+                    p.classList.add('invisible');
+                }
+            });
+
+            con_pw.addEventListener('input', () => {
+                if(con_pw.value !== pw.value) {
+                    con_pw.classList.add( 'invalid:text-pink-700','invalid:focus:ring-pink-700', 'invalid:focus:border-pink-700', 'peer');
+                    p2.classList.remove('invisible');
+                } else {
+                    con_pw.classList.remove('invalid:text-pink-700', 'invalid:focus:ring-pink-700', 'invalid:focus:border-pink-700', 'peer');
+                    p2.classList.add('invisible');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
