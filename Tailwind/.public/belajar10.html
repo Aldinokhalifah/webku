@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes Teknologi</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class=" mt-4 flex flex-col gap-6 md:flex md:flex-wrap md:justify-evenly">
+        <div class="h-32 mx-auto p-6 shadow-lg shadow-red-400 rounded-lg w-3/4 md:w-1/2 bg-white">
+           <div class="flex gap-2 items-center">
+            <h3 class="text-lg font-bold text-slate-700">Alan Kay <span class="font-light text-black">|</span></h3>
+            <span class="text-sm text-slate-500 font-serif">17 Mei 1940</span>
+           </div>
+            <p class="auto-type text-slate-600 font-light mt-2"></p>
+        </div>
+        <div class="h-32 mx-auto p-6 shadow-lg shadow-lime-400 rounded-lg w-3/4 md:w-1/2 bg-white">
+           <div class="flex gap-2 items-center">
+            <h3 class="text-lg font-bold text-slate-700">Arthur C. Clarke <span class="font-light text-black">|</span></h3>
+            <span class="text-sm text-slate-500 font-serif">16 Des 1917</span>
+           </div>
+            <p class="auto-type2 text-slate-600 font-light mt-2"></p>
+        </div>
+        <div class="h-36 mx-auto p-6 shadow-lg shadow-sky-400 rounded-lg w-3/4 md:w-1/2 bg-white">
+           <div class="flex gap-2 items-center">
+            <h3 class="text-lg font-bold text-slate-700">B. F. Skinner <span class="font-light text-black">|</span></h3>
+            <span class="text-sm text-slate-500 font-serif">20 Maret 1904</span>
+           </div>
+            <p class="auto-type3 text-slate-600 font-light mt-2"></p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function runTyped() {
+                const options = {
+                    typeSpeed: 140,
+                    backSpeed: 150,
+                    loop: true,
+                };
+
+                new Typed('.auto-type', {
+                    ...options,
+                    strings: ['" Teknologi adalah segala sesuatu yang tidak ada saat Anda lahir. "'],
+                });
+
+                new Typed('.auto-type2', {
+                    ...options,
+                    strings: ['" Setiap teknologi yang cukup maju setara dengan sihir. "'],
+                });
+
+                new Typed('.auto-type3', {
+                    ...options,
+                    strings: ['" Masalah sebenarnya bukanlah apakah mesin berpikir tetapi apakah manusia melakukannya."'],
+                });
+            }
+
+            runTyped();
+        });
+    </script>
+</body>
+</html>
