@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coba Tailwind</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        inter: ['Inter', 'sans-serif']
+                    },
+                },
+            },
+        };
+    </script>
+    <style>
+        .social-icons {
+            display: flex;
+            justify-content: center; /* Memusatkan ikon sosial */
+            margin-top: 0.5rem; /* Sedikit jarak atas untuk ikon sosial */
+            gap: 1rem; /* Jarak antar ikon sosial */
+        }
+    </style>
+</head>
+<body>
+    <div class="m-4 sm:outline sm:outline-red-500 md:outline md:outline-blue-500 lg:outline lg:outline-yellow-500 p-4">
+        <div class="container md:flex md:items-center mx-auto"> 
+            <img class="w-full h-auto rounded-lg object-cover shadow-xl mb-4   md:mb-0 md:w-1/2" src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfHx8MA%3D%3D" alt="">
+            <div class="text-center md:w-1/2 md:pr-4"> <!-- Konten teks di kanan -->
+                <h1 class="auto-type font-bold text-md mb-2 text-lg lg:text-xs"></h1> 
+                <h3 class="text-lg">Nama saya</h3> 
+                <h2 class="text-xl font-inter font-bold uppercase transition-all duration-500 lg:text-2xl">Rangga Anshori</h2>
+                <p class="text-balance text-slate-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias, fugit!</p>
+                <ul class="social-icons cursor-pointer ">
+                    <a href="https://www.youtube.com/" class="">
+                        <box-icon class="" type='logo' name='instagram'></box-icon>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <box-icon type='logo' name='facebook'></box-icon>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <box-icon type='logo' name='tiktok'></box-icon>
+                    </a>
+                    <a href="https://www.youtube.com/">
+                        <box-icon type='logo' name='whatsapp'></box-icon>
+                    </a>
+                </ul>
+            </div>
+        </div>
+        <div class="mt-10 container">
+            <h2 class="mb-2 font-[inter] font-bold text-2xl" id="changeColorButton">Big Promo Toyota!</h2>
+            <img class="w-full h-auto rounded-lg object-cover shadow-xl mb-4  md:mb-0" src="/img/toyota.jpg" alt="">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            function runTyped() {
+                const options = {
+                    typeSpeed: 150,
+                    backSpeed: 150,
+                    loop: false,
+                    showCursor: false
+                };
+                new Typed('.auto-type', {
+                    ...options,
+                    strings: ['Hello..', 'Hola..', 'Hai..', 'Halo..'],
+                });
+            }
+            runTyped();
+        });
+
+        var changeColorButton = document.getElementById('changeColorButton');
+
+        // Fungsi untuk mendapatkan warna acak
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        // Fungsi untuk mengubah warna teks "Udin" secara otomatis
+        function changeTextColor() {
+            setInterval(function() {
+                var randomColor = getRandomColor();
+                changeColorButton.style.color = randomColor; // Mengubah warna teks "Udin"
+            }, 2000); 
+        }
+
+        // Memulai perubahan warna teks
+        changeTextColor();
+    </script>
+</body>
+</html>

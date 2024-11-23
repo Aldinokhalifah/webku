@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/navbar";
 import Image from "next/image";
+import Link from "next/link";
 import * as React from "react"
 import axios from 'axios';
 import { Card, CardContent } from "@/components/ui/card"
@@ -15,6 +16,7 @@ import {
 
 import { useState, useEffect } from 'react';
 
+
 export default function Home() {
   interface ImageData {
     id: string;
@@ -26,19 +28,25 @@ export default function Home() {
     alt_description: string;
   };
 
+  
   const [images, setImages] = useState<ImageData[]>([]);
 
   useEffect(() => {
     // Replace 'YOUR_ACCESS_KEY' with your actual Unsplash API Access Key
     const fetchImages = async () => {
       try {
-        const response = await axios.get('https://api.unsplash.com/search/photos', {
-          params: { query: 'clothing', per_page: 1 },
+        const response = await axios.get('https://api.unsplash.com/photos/random', {
+          params: {
+            query: 'clothing', // Ganti dengan tema yang diinginkan
+            count: 1, // Jumlah gambar random yang ingin diambil
+          },
           headers: {
             Authorization: `Client-ID f432jygEoEW5U_Hz7p4dw-DsH73VU472gkeWI6-rFsk`,
           },
         });
-        setImages(response.data.results);
+
+        // Set hasil response sebagai array karena `random` bisa mengembalikan satu atau lebih gambar
+        setImages(Array.isArray(response.data) ? response.data : [response.data]);
       } catch (error) {
         console.error('Error fetching data from Unsplash:', error);
       }
@@ -121,18 +129,9 @@ export default function Home() {
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href="#">
-                      <span aria-hidden="true" className="absolute inset-0"></span>
-                      Basic Tee
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">Black</p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">$35</p>
-              </div>
+              <Link href="/sales">
+              <button className="opacity-0 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-500 border border-slate-700 w-full py-1 bg-black text-white rounded-lg mt-1">Show More</button>
+              </Link>
             </div>
             <div className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
@@ -144,18 +143,9 @@ export default function Home() {
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href="#">
-                      <span aria-hidden="true" className="absolute inset-0"></span>
-                      Basic Tee
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">Black</p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">$35</p>
-              </div>
+              <Link href="/sales">
+              <button className="opacity-0 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-500 border border-slate-700 w-full py-1 bg-black text-white rounded-lg mt-1">Show More</button>
+              </Link>
             </div>
             <div className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
@@ -167,18 +157,9 @@ export default function Home() {
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href="#">
-                      <span aria-hidden="true" className="absolute inset-0"></span>
-                      Basic Tee
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">Black</p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">$35</p>
-              </div>
+              <Link href="/sales">
+              <button className="opacity-0 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-500 border border-slate-700 w-full py-1 bg-black text-white rounded-lg mt-1">Show More</button>
+              </Link>
             </div>
             <div className="group relative">
               <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
@@ -190,21 +171,58 @@ export default function Home() {
                   className="h-full w-full object-cover object-center lg:h-full lg:w-full"
                 />
               </div>
-              <div className="mt-4 flex justify-between">
-                <div>
-                  <h3 className="text-sm text-gray-700">
-                    <a href="#">
-                      <span aria-hidden="true" className="absolute inset-0"></span>
-                      Basic Tee
-                    </a>
-                  </h3>
-                  <p className="mt-1 text-sm text-gray-500">Black</p>
-                </div>
-                <p className="text-sm font-medium text-gray-900">$35</p>
-              </div>
+              <Link href="/sales">
+              <button className="opacity-0 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-500 border border-slate-700 w-full py-1 bg-black text-white rounded-lg mt-1">Show More</button>
+              </Link>
             </div>
-            <div className="flex mx-auto gap-10 ml-20">
-              <Carousel className="w-full max-w-xs mx-auto shadow-sm">
+            <div className="group relative">
+              <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none group-hover:opacity-75 lg:h-80">
+                <Image
+                  src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                  alt="Front of men's Basic Tee in black."
+                  width={800}
+                  height={500}
+                  className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                />
+              </div>
+              <Link href="/sales">
+              <button className="opacity-0 group-hover:opacity-100 group-hover:shadow-lg transition-all duration-500 border border-slate-700 w-full py-1 bg-black text-white rounded-lg mt-1">Show More</button>
+              </Link>
+            </div>
+          </div>
+          <h2 className="text-2xl font-bold tracking-tight text-gray-900 mt-8">
+          Daily Fashion
+          </h2>
+          <div className="flex mx-auto gap-10 ml-20 my-4">
+              <Carousel className="w-full max-w-xs mx-auto">
+              <CarouselContent>
+                  {Array.from({ length: 5 }).map((_, index) => (
+                  <CarouselItem key={index}>
+                  <div className="p-1">
+                    <Card>
+                      <CardContent className="flex aspect-square items-center justify-center p-6">
+                        {images.map((image) => (
+                          <div key={image.id}>
+                            <Image
+                              src={image.urls.small}
+                              alt={image.alt_description || "Unsplash Image"}
+                              width={500}
+                              height={500}
+                              className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+                            />
+                          </div>
+                        ))}
+                      </CardContent>
+                    </Card>
+                  </div>
+                </CarouselItem>
+                
+                  ))}
+              </CarouselContent>
+              {/* <CarouselPrevious />
+              <CarouselNext /> */}
+              </Carousel>
+              <Carousel className="w-full max-w-xs mx-auto">
               <CarouselContent>
                   {Array.from({ length: 5 }).map((_, index) => (
                   <CarouselItem key={index}>
@@ -232,7 +250,7 @@ export default function Home() {
               {/* <CarouselPrevious />
               <CarouselNext /> */}
               </Carousel>
-              <Carousel className="w-full max-w-xs mx-auto shadow-sm">
+              <Carousel className="w-full max-w-xs mx-auto">
               <CarouselContent>
                   {Array.from({ length: 5 }).map((_, index) => (
                   <CarouselItem key={index}>
@@ -260,40 +278,10 @@ export default function Home() {
               {/* <CarouselPrevious />
               <CarouselNext /> */}
               </Carousel>
-              <Carousel className="w-full max-w-xs mx-auto shadow-sm">
-              <CarouselContent>
-                  {Array.from({ length: 5 }).map((_, index) => (
-                  <CarouselItem key={index}>
-                  <div className="p-1">
-                    <Card>
-                      <CardContent className="flex aspect-square items-center justify-center p-6">
-                        {images.map((image) => (
-                          <div key={image.id}>
-                            <Image
-                              src={image.urls.small}
-                              alt={image.alt_description}
-                              width={500}
-                              height={300}
-                              className="h-full w-full object-cover object-center lg:h-full lg:w-full"
-                            />
-                          </div>
-                        ))}
-                      </CardContent>
-                    </Card>
-                  </div>
-                </CarouselItem>
-                
-                  ))}
-              </CarouselContent>
-              {/* <CarouselPrevious />
-              <CarouselNext /> */}
-              </Carousel>
-              
-            </div>
-
           </div>
         </div>
       </div>
     </>
   );
 }
+

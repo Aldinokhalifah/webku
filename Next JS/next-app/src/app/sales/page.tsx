@@ -136,6 +136,7 @@ export default function SalesPage() {
                 </div>
             </div>
         </div>
+        <h2 className="text-2xl font-bold tracking-tight text-gray-900 mb-4">What&apos;s Coming!</h2>
         <div className="flex mx-auto gap-10 ml-16">
             <Carousel className="w-full max-w-xs mx-auto shadow-sm">
             <CarouselContent>

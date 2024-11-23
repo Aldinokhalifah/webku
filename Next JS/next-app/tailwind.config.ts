@@ -1,17 +1,6 @@
 import type { Config } from "tailwindcss";
+import plugin from 'tailwindcss/plugin';
 
-const flowbite = [require("flowbite-react/tailwind")];
-
-module.exports = {
-	content: [
-	  // ...
-	flowbite.content(),
-	],
-	plugins: [
-	  // ...
-	flowbite.plugin(),
-	],
-};
 
 const config: Config = {
     darkMode: ["class"],
@@ -19,10 +8,10 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
-  theme: {
-  	extend: {
-  		colors: {
+],
+theme: {
+	extend: {
+	colors: {
   			background: 'hsl(var(--background))',
   			foreground: 'hsl(var(--foreground))',
   			card: {
@@ -71,6 +60,6 @@ const config: Config = {
   		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  
 };
 export default config;
