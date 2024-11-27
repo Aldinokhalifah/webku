@@ -7,13 +7,15 @@ export async function GET(request: NextRequest) {
     const data = [
         {
             id: 1,
-            name: 'Sepatu',
-            price: 10000
+            title: 'Sepatu',
+            price: 10000,
+            image: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3b58d490-7e40-4768-b023-ac7c6dbc081e/custom-dunk-low-unlocked-by-you.png'
         },
         {
             id: 2,
-            name: 'Sandal',
-            price: 20000
+            title: 'Sandal',
+            price: 20000,
+            image: 'https://static.nike.com/a/images/t_PDP_864_v1/f_auto,b_rgb:f5f5f5/3b58d490-7e40-4768-b023-ac7c6dbc081e/custom-dunk-low-unlocked-by-you.png'
         }
     ];
 
