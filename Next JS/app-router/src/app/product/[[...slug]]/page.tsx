@@ -4,7 +4,13 @@ type ProductPageProps = {params: {slug: string }}
 
 async function getData() {
     // const res = await fetch('https://fakestoreapi.com/products');
-    const res = await fetch('http://localhost:3000/api/product', {cache: 'no-store'});
+    const res = await fetch('http://localhost:3000/api/product', {
+    cache: 'no-store',
+    next: {
+        // revalidate: 30
+        tags: ['products']
+    }
+    });
 
     if(!res.ok) {
         throw new Error('Failed to fetch data');
