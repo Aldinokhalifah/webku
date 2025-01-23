@@ -7,7 +7,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
     children: ReactNode;
 }
 
-export default function Button({ variant, size, className = '', children, ...props }: ButtonProps) {
+export default function Button({ variant, size ,className = '', children, ...props }: ButtonProps) {
     const baseStyle = "text-center flex items-center justify-center space-x-2 transition-colors duration-200 rounded-md focus:outline-none focus:ring focus:ring-blue-300"
     const sizeStyle = {
         sm: "px-3 py-1 text-sm",
@@ -21,7 +21,7 @@ export default function Button({ variant, size, className = '', children, ...pro
         outline: "bg-transparent text-blue-500 border border-blue-500 hover:bg-blue-50",
     }
     return (
-        <button className={`${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]} ${className}`} {...props}>
+        <button  className={`${baseStyle} ${sizeStyle[size]} ${variantStyle[variant]} ${className}`} {...props}>
             {children}
         </button>
     )

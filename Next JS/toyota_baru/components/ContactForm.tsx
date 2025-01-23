@@ -30,7 +30,7 @@ export default function ContactForm() {
     return (
         <section id="kontak" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-navy" data-aos="fade-up">Hubungi Saya</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-blue-900" data-aos="fade-up">Hubungi Saya</h2>
             <form onSubmit={handleSubmit} className="max-w-md mx-auto" data-aos="fade-up" data-aos-delay="200">
             <div className="mb-4">
                 <Input

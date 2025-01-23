@@ -8,7 +8,7 @@ import Button from './ui/Button'
 const testimonials = [
     {
         id: 1,
-        name: 'Andi Pratama',
+        name: 'Sidik',
         comment: 'Pelayanan Rangga sangat memuaskan. Ia membantu saya menemukan mobil yang sesuai dengan kebutuhan dan budget.',
         image: '/placeholder.svg?height=100&width=100'
     },
@@ -19,7 +19,7 @@ const testimonials = [
     },
     {
         id: 3,
-        name: 'Rudi Hartono',
+        name: 'Fendy',
         comment: 'Rangga memberikan saran yang sangat membantu dalam memilih mobil untuk keluarga saya. Sangat direkomendasikan!',
     },
     {

@@ -1,16 +1,25 @@
+'use client'
+
 import Image from 'next/image'
 import Button from './ui/Button'
+
 
 const cars = [
     { id: 1, name: 'Agya', image: '/img/agya.png', text: '178.400.000' },
     { id: 2, name: 'Avanza', image: '/img/avanza.png', text: '239.700.000' },
-    { id: 3, name: 'Hatchback Sporty', image: '/placeholder.svg?height=200&width=300' },
-    { id: 4, name: 'MPV Keluarga', image: '/placeholder.svg?height=200&width=300' },
-    { id: 5, name: 'Sport Mewah', image: '/placeholder.svg?height=200&width=300' },
-    { id: 6, name: 'Limosin', image: '/placeholder.svg?height=200&width=300' },
+    { id: 3, name: 'Fortuner', image: '/img/fortuner.png', text: '663.200.000' },
+    { id: 4, name: 'Zenix', image: '/img/zenix.png', text: '430.400.000'},
+    { id: 5, name: 'Rush', image: '/img/rush.png', text: '284.400.000' },
+    { id: 6, name: 'Calya', image: '/img/calya.png', text: '170.200.000' },
 ]
 
 export default function CarGallery() {
+
+    function kirimPesan()  {
+        const url = 'https://wa.me/6281994007734?text=Halo%20Rangga%20Toyota%2C%20saya%20tertarik%20dengan%20mobil%20yang%20Anda%20jual';
+        window.open(url, '_blank');
+    }
+
     return (
         <section id="mobil" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -24,7 +33,7 @@ export default function CarGallery() {
                             <p className="text-base md:text-lg text-gray-600 font-bold">{ car.text || 'Kualitas terbaik dengan harga bersaing'}</p>
                             <span className="text-sm text-slate-500">Kualitas terbaik dengan harga bersaing</span>
                         </div>
-                        <Button variant="primary" size="md" className="bg-white text-blue-900 hover:bg-gray-300 shadow-lg mx-auto mb-4 font-semibold">
+                        <Button onClick={kirimPesan} variant="primary" size="md" className="bg-white text-blue-900 hover:bg-gray-300 shadow-lg mx-auto mb-4 font-semibold">
                             Hubungi Saya
                         </Button>
                     </div>
