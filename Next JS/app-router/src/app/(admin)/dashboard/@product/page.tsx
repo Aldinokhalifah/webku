@@ -22,7 +22,7 @@ export default function AdminPageProduct() {
     };
 
     return (
-        <div>
+        <div className="w-3/6 h-96 bg-gray-300 rounded-lg flex justify-center items-center">
             <button 
             className="bg-blue-700 p-2 mx-auto mt-4"
             onClick={() => revalidate()}>Revalidate</button>
