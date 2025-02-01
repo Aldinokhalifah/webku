@@ -11,8 +11,7 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
-    <title>Rangga Toyota</title>
-    <div className="min-h-screen bg-gray-50">
+      <div className="min-h-screen bg-gray-50">
         <Header />
         <Carousel />
         <main>
@@ -24,8 +23,7 @@ export default function Home() {
           <ContactForm />
         </main>
         <Footer />
-    </div>
+      </div>
     </>
-    
   );
 }

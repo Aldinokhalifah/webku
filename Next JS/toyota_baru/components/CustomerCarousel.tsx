@@ -51,18 +51,18 @@ export default function CustomerCarousel() {
             <div className="overflow-hidden" ref={emblaRef}>
             <div className="flex">
                 {customerPhotos.map((photo) => (
-                <div key={photo.id} className="flex-[0_0_50%] min-w-0 sm:flex-[0_0_33.33%] md:flex-[0_0_25%] px-2">
+                <div key={photo.id} className="flex-[0_0_50%] min-w-0 sm:flex-[0_0_33.33%] md:flex-[0_0_25%] px-2 mx-auto">
                     <div className="bg-white rounded-lg overflow-hidden shadow-md">
-                    <Image
-                        src={photo.image || "/placeholder.svg"}
-                        alt={photo.alt}
-                        width={300}
-                        height={300}
-                        className="w-full h-48 lg:h-72  object-cover"
-                    />
-                    <div className="p-4">
-                        <p className="text-sm text-gray-600">{photo.caption}</p>
-                    </div>
+                        <Image
+                            src={photo.image || "/placeholder.svg"}
+                            alt={photo.alt}
+                            width={300}
+                            height={300}
+                            className="w-full h-48 lg:h-72  object-cover"
+                        />
+                        <div className="p-4">
+                            <p className="text-sm text-gray-600">{photo.caption}</p>
+                        </div>
                     </div>
                 </div>
                 ))}

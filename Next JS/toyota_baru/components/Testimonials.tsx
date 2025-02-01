@@ -14,12 +14,12 @@ const testimonials = [
     },
     {
         id: 2,
-        name: 'Siti Rahayu',
+        name: 'Fendy',
         comment: 'Proses pembelian mobil jadi mudah dan cepat berkat bantuan Rangga. Terima kasih atas pelayanan yang luar biasa!',
     },
     {
         id: 3,
-        name: 'Fendy',
+        name: 'Ferdi',
         comment: 'Rangga memberikan saran yang sangat membantu dalam memilih mobil untuk keluarga saya. Sangat direkomendasikan!',
     },
     {
@@ -86,7 +86,7 @@ export default function Testimonials() {
             <div className="overflow-hidden" ref={emblaRef}>
                 <div className="flex">
                 {testimonials.map((testimonial) => (
-                    <div key={testimonial.id} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-4">
+                    <div key={testimonial.id} className="flex-[0_0_100%] min-w-0 sm:flex-[0_0_50%] lg:flex-[0_0_33.333%] px-4 mx-auto">
                     <div className="bg-white p-6 rounded-lg shadow-md h-full">
                         <div className="flex items-center mb-4">
                         <h3 className="text-lg md:text-xl font-semibold text-blue-900">{testimonial.name}</h3>
