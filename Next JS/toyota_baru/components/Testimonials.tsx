@@ -19,12 +19,12 @@ const testimonials = [
     },
     {
         id: 3,
-        name: 'Ferdi',
+        name: 'Desari',
         comment: 'Rangga memberikan saran yang sangat membantu dalam memilih mobil untuk keluarga saya. Sangat direkomendasikan!',
     },
     {
         id: 4,
-        name: 'Lisa Permata',
+        name: 'Lutfi',
         comment: 'Saya sangat puas dengan layanan Rangga. Dia sangat profesional dan memahami kebutuhan pelanggan dengan baik.',
     },
     {

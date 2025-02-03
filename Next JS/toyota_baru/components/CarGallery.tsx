@@ -23,7 +23,7 @@ export default function CarGallery() {
     return (
         <section id="mobil" className="py-12 md:py-20 bg-white">
         <div className="container mx-auto px-4">
-            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12">Pilihan Mobil Terbaik</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 md:mb-12 text-blue-900">Pilihan Mobil Terbaik</h2>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 {cars.map((car, index) => (
                     <div key={car.id} className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-lg hover:shadow-slate-300" data-aos="fade-up" data-aos-delay={index * 100}>
@@ -39,6 +39,7 @@ export default function CarGallery() {
                     </div>
                 ))}
             </div>
+            <p className='text-md text-slate-500 text-center mt-6 font-semibold'><span className='text-red-600'>*</span> Untuk pemesanan model lainnya bisa hubungi saya</p>
         </div>
         </section>
     )

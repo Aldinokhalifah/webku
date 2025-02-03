@@ -9,8 +9,8 @@ import Button from './ui/Button'
 const customerPhotos = [
     { id: 1, image: '/img/foto_cus1.jpg', alt: 'Pelanggan 1 dengan Sales', caption: 'Pak Sidik dengan Pelanggan Puas' },
     { id: 2, image: '/img/foto_cus2.jpg', alt: 'Pelanggan 2 dengan Sales', caption: 'Transaksi Sukses dengan Pak Fendy' },
-    { id: 3, image: '/img/foto_cus1.jpg', alt: 'Pelanggan 3 dengan Sales', caption: 'Keluarga Bahagia dengan Mobil Baru' },
-    { id: 4, image: '/img/foto_cus2.jpg', alt: 'Pelanggan 4 dengan Sales', caption: 'Pak Rudi Menerima Kunci Mobil' },
+    { id: 3, image: '/img/foto_cus3.jpg', alt: 'Pelanggan 3 dengan Sales', caption: 'Keluarga Bahagia dengan Mobil Baru' },
+    { id: 4, image: '/img/foto_cus4.jpg', alt: 'Pelanggan 4 dengan Sales', caption: 'Bu Lutfi Menerima Kunci Mobil' },
     { id: 5, image: '/img/foto_cus1.jpg', alt: 'Pelanggan 5 dengan Sales', caption: 'Pak Rusdi Senang Dengan Mobilnya' },
     { id: 6, image: '/img/foto_cus2.jpg', alt: 'Pelanggan 6 dengan Sales', caption: 'Pak Akbar Semoga Sukses' },
 ]

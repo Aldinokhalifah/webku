@@ -1,8 +1,9 @@
 'use client'
 
 import Link from 'next/link'
+import Image from 'next/image'
 import { useState } from 'react'
-import { Menu, X, Instagram, Youtube, Phone, Mail } from 'lucide-react'
+import { Menu, X, Instagram, MapPin, Phone, Mail } from 'lucide-react'
 import Button from './ui/Button'
 
 export default function Header() {
@@ -25,7 +26,16 @@ export default function Header() {
     return (
         <header className="bg-blue-900 shadow-sm">
             <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-                <Link href="/" className="text-xl font-bold text-white">Rangga Toyota</Link>
+                {/* <Link href="/" className="text-xl font-bold text-white"><span className='text-red-600'>Rangga</span> <span className='text-blue-600'>Toyota</span></Link> */}
+                <div className="flex flex-col items-center md:items-start ml-1">
+                    <Image
+                        src={"/img/tunas_toyota2.png"}
+                        alt="Tunas Toyota"
+                        width={200}
+                        height={50}
+                        className='bg-white p-2 rounded-full'
+                    />
+                </div>
                 <div className="md:hidden">
                     <Button variant="outline" size="icon" className="text-white" onClick={() => setIsMenuOpen(!isMenuOpen)}>
                         {isMenuOpen ? <X /> : <Menu />}
@@ -40,8 +50,8 @@ export default function Header() {
                     </Link></li>
                     <li><Link href="#Youtube" className="block py-2 md:py-0 text-white hover:text-red-500">
                     <div className="group flex relative">
-                        <p className='text-sm  absolute -top-6 left-1/2 transform -translate-x-1/2 hidden lg:group-hover:block  text-red-500  rounded-lg transition-all duration-700 shadow-sm'>Youtube</p>
-                        <Youtube className="w-6 h-6 md:w-5 md:h-5" />
+                        <p className='text-sm  absolute -top-6 left-1/2 transform -translate-x-1/2 hidden lg:group-hover:block  text-red-500  rounded-lg transition-all duration-700 shadow-sm'>Map</p>
+                        <MapPin className="w-6 h-6 md:w-5 md:h-5" />
                     </div>
                     </Link></li>
                     <li><Link href="#" className="block py-2 md:py-0 text-white hover:text-red-500">
