@@ -8,7 +8,7 @@ export default function PriceCoins() {
     const [loading, setLoading] = useState(true);
 
     // Cache configuration
-    const CACHE_DURATION = 5 * 60 * 1000; // 5 menit dalam milliseconds
+    const CACHE_DURATION = 10 * 60 * 1000; // 10 menit dalam milliseconds
     const CACHE_KEYS = {
         COINS: 'crypto_coins_cache',
         CHART: 'crypto_chart_cache'
@@ -153,25 +153,6 @@ export default function PriceCoins() {
         }
     };
 
-    // Check apakah data dari cache
-    const isDataFromCache = () => {
-        return getCacheData(CACHE_KEYS.COINS) !== null;
-    };
-
-    // Get cache age untuk display
-    const getCacheAge = () => {
-        try {
-            const cached = localStorage.getItem(CACHE_KEYS.COINS);
-            if (!cached) return null;
-            
-            const { timestamp } = JSON.parse(cached);
-            const ageInMinutes = Math.floor((Date.now() - timestamp) / 60000);
-            return ageInMinutes;
-        } catch {
-            return null;
-        }
-    };
-
     if (loading) {
         return (
             <div className="flex items-center justify-center min-h-96">
@@ -184,7 +165,7 @@ export default function PriceCoins() {
     }
 
     return(
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-4 py-8 my-20">
             <div className="backdrop-blur-md bg-white/5 border border-white/10 rounded-3xl p-8 shadow-2xl">
                 <div className="mb-8">
                     <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center space-y-4 sm:space-y-0">

@@ -158,7 +158,7 @@ export default function CoinList() {
                                     {/* Volume (placeholder since not in original data) */}
                                     <td className="p-4">
                                         <div className="text-white/60">
-                                            ${(Math.random() * 1000000000).toLocaleString('en-US', {
+                                            ${Number(coin.volumeUsd24Hr).toLocaleString('en-US', {
                                                 minimumFractionDigits: 0,
                                                 maximumFractionDigits: 0,
                                             })}

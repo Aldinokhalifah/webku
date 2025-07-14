@@ -80,7 +80,7 @@ const CoinHoverCard = ({ data, position }) => {
                     <div className="flex justify-between items-center">
                         <span className="text-gray-300 text-sm">24h Volume</span>
                         <span className="text-white font-semibold">
-                            ${(Math.random() * 1000000000).toLocaleString('en-US', {
+                            ${Number(data.volumeUsd24Hr).toLocaleString('en-US', {
                                 minimumFractionDigits: 0,
                                 maximumFractionDigits: 0,
                             })}
@@ -90,7 +90,7 @@ const CoinHoverCard = ({ data, position }) => {
                     <div className="flex justify-between items-center">
                         <span className="text-gray-300 text-sm">Supply</span>
                         <span className="text-white font-semibold">
-                            {(Math.random() * 100000000).toLocaleString('en-US', {
+                            {Number(data.supply).toLocaleString('en-US', {
                                 minimumFractionDigits: 0,
                                 maximumFractionDigits: 0,
                             })}
